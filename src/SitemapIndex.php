@@ -6,11 +6,20 @@ class SitemapIndex
 {
     private string $content = '';
 
-    public function add($url): SitemapIndex
+    public function add(string | array $url): SitemapIndex
     {
-        $content = '  <sitemap>' . PHP_EOL;
-        $content .= '    <loc>' . $url . '</loc>' . PHP_EOL;
-        $content .= '  </sitemap>' . PHP_EOL;
+        $content = '';
+        if (is_array($url)) {
+            foreach ($url as $value) {
+                $content .= '  <sitemap>' . PHP_EOL;
+                $content .= '    <loc>' . $value . '</loc>' . PHP_EOL;
+                $content .= '  </sitemap>' . PHP_EOL;
+            }
+        } else {
+            $content .= '  <sitemap>' . PHP_EOL;
+            $content .= '    <loc>' . $url . '</loc>' . PHP_EOL;
+            $content .= '  </sitemap>' . PHP_EOL;
+        }
 
         $this->content .= $content;
 

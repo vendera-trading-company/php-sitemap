@@ -21,4 +21,23 @@ class SitemapTest extends TestCase
 
         $this->assertStringContainsString($url, $result);
     }
+
+    public function testSitemapContainsMultipleUrl()
+    {
+        $sitemap = new Sitemap();
+
+        $url = [
+            'https://127.0.0.1/test/url',
+            'https://127.0.0.1/test/url1',
+            'https://127.0.0.1/test/url2'
+        ];
+
+        $sitemap->add($url);
+
+        $result = $sitemap->generate();
+
+        $this->assertStringContainsString($url[0], $result);
+        $this->assertStringContainsString($url[1], $result);
+        $this->assertStringContainsString($url[2], $result);
+    }
 }

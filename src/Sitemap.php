@@ -1,0 +1,33 @@
+<?php
+
+namespace VenderaTradingCompany\PHPSitemap;
+
+class Sitemap
+{
+    private string $content = '';
+
+    public function add($url, $priority = 0.3, $changefreq = 'weekly'): Sitemap
+    {
+        $content = '  <url>' . PHP_EOL;
+        $content .= '    <loc>' . $url . '</loc>' . PHP_EOL;
+        $content .= '    <priority>' . $priority . '</priority>' . PHP_EOL;
+        $content .= '    <changefreq>' . $changefreq . '</changefreq>' . PHP_EOL;
+        $content .= '  </url>' . PHP_EOL;
+
+        $this->content .= $content;
+
+        return $this;
+    }
+
+    public function generate(): string
+    {
+        $sitemap = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;
+        $sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . PHP_EOL;
+
+        $sitemap .= $this->content;
+
+        $sitemap .= '</urlset>';
+
+        return $sitemap;
+    }
+}

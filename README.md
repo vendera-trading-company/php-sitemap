@@ -11,7 +11,7 @@
 composer require vendera-trading-company/php-sitemap
 ```
 
-Vendera Trading Company
+Vendera Trading Company<br>
 651 North Broad Street<br>
 19707 Middletown<br>
 Delaware / United States

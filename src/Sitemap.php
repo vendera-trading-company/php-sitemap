@@ -7,7 +7,7 @@ class Sitemap
     private string $content = '';
 
     /** Add a url to the sitemap */
-    public function add(string | array $url, $priority = 0.3, $changefreq = 'weekly'): Sitemap
+    public function add(string | array $url, $priority = 0.3, ChangeFrequency $changefreq = ChangeFrequency::Weekly): Sitemap
     {
         $content = '';
         if (is_array($url)) {
@@ -15,14 +15,14 @@ class Sitemap
                 $content .= '  <url>' . PHP_EOL;
                 $content .= '    <loc>' . $value . '</loc>' . PHP_EOL;
                 $content .= '    <priority>' . $priority . '</priority>' . PHP_EOL;
-                $content .= '    <changefreq>' . $changefreq . '</changefreq>' . PHP_EOL;
+                $content .= '    <changefreq>' . $changefreq->value . '</changefreq>' . PHP_EOL;
                 $content .= '  </url>' . PHP_EOL;
             }
         } else {
             $content .= '  <url>' . PHP_EOL;
             $content .= '    <loc>' . $url . '</loc>' . PHP_EOL;
             $content .= '    <priority>' . $priority . '</priority>' . PHP_EOL;
-            $content .= '    <changefreq>' . $changefreq . '</changefreq>' . PHP_EOL;
+            $content .= '    <changefreq>' . $changefreq->value . '</changefreq>' . PHP_EOL;
             $content .= '  </url>' . PHP_EOL;
         }
 

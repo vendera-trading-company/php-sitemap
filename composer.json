@@ -1,24 +1,30 @@
 {
-    "name": "vendera-trading-company/php-sitemap",
-    "description": "Sitemap helper for PHP.",
-    "autoload": {
-        "psr-4": {
-            "VenderaTradingCompany\\PHPSitemap\\": "src"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "require-dev": {
-        "phpunit/phpunit": "^10.0"
-      },
-      "authors": [
-        {
-          "name": "Vendera Trading Company"
-        }
-      ]
+  "name": "vendera-trading-company/php-sitemap",
+  "description": "Sitemap helper for PHP.",
+  "keywords": [
+    "php",
+    "sitemap",
+    "seo",
+    "website"
+  ],
+  "autoload": {
+    "psr-4": {
+      "VenderaTradingCompany\\PHPSitemap\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "authors": [
+    {
+      "name": "Vendera Trading Company"
+    }
+  ]
 }

@@ -6,6 +6,7 @@ class Sitemap
 {
     private string $content = '';
 
+    /** Add a url to the sitemap */
     public function add(string | array $url, $priority = 0.3, $changefreq = 'weekly'): Sitemap
     {
         $content = '';
@@ -30,6 +31,7 @@ class Sitemap
         return $this;
     }
 
+    /** Generate the sitemap */
     public function generate(): string
     {
         $sitemap = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;

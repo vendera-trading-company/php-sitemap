@@ -6,6 +6,7 @@ class SitemapIndex
 {
     private string $content = '';
 
+    /** Add a url to the sitemap index */
     public function add(string | array $url): SitemapIndex
     {
         $content = '';
@@ -26,6 +27,7 @@ class SitemapIndex
         return $this;
     }
 
+    /** Generate the sitemap index */
     public function generate(): string
     {
         $sitemap = '<?xml version="1.0" encoding="UTF-8"?>' . PHP_EOL;

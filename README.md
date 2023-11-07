@@ -7,9 +7,9 @@
 - Sitemap index
 
 ## Usage
-'''
+ˋˋˋ
 composer require vendera-trading-company/php-sitemap
-'''
+ˋˋˋ
 
 Vendera Trading Company
 651 North Broad Street<br>

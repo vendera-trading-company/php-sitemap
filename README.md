@@ -6,7 +6,12 @@
 - Sitemap
 - Sitemap index
 
-## Vendera Trading Company
+## Usage
+'''
+composer require vendera-trading-company/php-sitemap
+'''
+
+Vendera Trading Company
 651 North Broad Street<br>
 19707 Middletown<br>
 Delaware / United States

@@ -7,6 +7,9 @@
     "seo",
     "website"
   ],
+    "license": [
+    "MIT"
+  ],
   "autoload": {
     "psr-4": {
       "VenderaTradingCompany\\PHPSitemap\\": "src"
